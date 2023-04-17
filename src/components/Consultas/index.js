@@ -2,15 +2,7 @@ import '../../reset.css'
 import './Consultas.css'
 import { useState, useEffect } from 'react'
 import { db } from '../../firebaseConnection'
-import {
-    doc,
-    collection,
-    addDoc,
-    getDocs,
-    updateDoc,
-    deleteDoc,
-    onSnapshot
-} from 'firebase/firestore'
+import { doc, collection, addDoc, getDocs, updateDoc, deleteDoc, onSnapshot } from 'firebase/firestore'
 import { async } from '@firebase/util'
 
 const Consultas = () => {
@@ -80,7 +72,7 @@ const Consultas = () => {
     }
 
     async function editarConsulta() {
-        const docRef = doc(db, "consultas")
+        const docRef = doc(db, "consultas", idConsulta)
 
         await updateDoc(docRef, {
             titulo: titulo,
@@ -100,7 +92,7 @@ const Consultas = () => {
     }
 
     async function excluirConsulta() {
-        const docRef = doc(db, "consultas")
+        const docRef = doc(db, "consultas", idConsulta)
 
         await deleteDoc(docRef)
             .then(() => {
@@ -137,14 +129,14 @@ const Consultas = () => {
                 <ul>
                     {consultas.map((consulta) => {
                         return (
-                            <li>
-                                <span>ID: {consulta.id}</span>
+                            <li key={consulta.id} className='lista-busca-consulta__item'>
+                                <span className='lista-busca-consulta__span'>ID: {consulta.id}</span>
                                 <br />
-                                <span>Título: {consulta.titulo}</span>
+                                <span className='lista-busca-consulta__span'>Título: {consulta.titulo}</span>
                                 <br />
-                                <span>Descrção: {consulta.descricao}</span>
+                                <span className='lista-busca-consulta__span'>Descrção: {consulta.descricao}</span>
                                 <br />
-                                <span>Hora: {consulta.hora}</span>
+                                <span className='lista-busca-consulta__span'>Hora: {consulta.hora}</span>
                                 <br />
 
                                 <button onClick={() => excluirConsulta(consulta.id)}>Excluir</button>

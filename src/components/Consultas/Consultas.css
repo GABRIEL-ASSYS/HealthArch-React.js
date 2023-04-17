@@ -1,3 +1,23 @@
+.lista-busca-consulta__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.lista-busca-consulta__span {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #022C2F;      
+}
+
+h2 {
+    font-size: 3rem;
+    color: #022C2F;
+    text-transform: uppercase;
+}
+
 .background {
     background-color: #03989e;
 }
@@ -34,6 +54,10 @@ label, span {
     font-size: 1.5rem;
 }
 
+span {
+    color: #022C2F;
+}
+
 input {
     position: relative;
     font-size: 2rem;
@@ -48,6 +72,11 @@ input:hover {
     box-shadow: 0.125rem 0.125rem 0.125rem #022C2F;
     transform: scale(1.025);
     transition-duration: 1s;
+}
+
+input::placeholder {
+    font-size: 1rem;
+    color: #079480;
 }
 
 @media screen and (max-width: 768px){
