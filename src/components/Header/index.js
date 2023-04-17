@@ -6,12 +6,10 @@ const Header = () => {
 
     return (
         <header>
-            <img className='header-logo' src='/img/Logo.png' />
+            <img className='header-logo' src='../../img/Logo.png' />
             <div className='menu'>
-                <Link className='menu-link' to="/Home">Home</Link>
-                <Link className='menu-link' to="/Login">Login</Link>
-                <Link className='menu-link' to="/Cadastro">Cadastro</Link>
-                <Link className='menu-link' to="/Consultas">Consultas</Link>
+                <Link className='menu-link' to="/LoginPage">Login</Link>
+                <Link className='menu-link' to="/ConsultasPage">Consultas</Link>
             </div>
         </header>
     )

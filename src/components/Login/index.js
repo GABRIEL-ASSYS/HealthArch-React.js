@@ -90,13 +90,13 @@ const Login = () => {
                 )
             }
 
-            <div className='container'>
+            <div className='login'>
                 <h2>Usuários</h2>
                 <label>Email:</label>
-                <input placeholder='Digite seu Email' value={email}  onChange={(email) => setIdPost(email.target.value)} />
+                <input placeholder='Digite seu Email' value={email}  onChange={(email) => setEmail(email.target.value)} />
                 <br/>
                 <label>Senha:</label>
-                <input placeholder='Digite sua Senha' value={senha}  onChange={(senha) => setIdPost(senha.target.value)} />
+                <input placeholder='Digite sua Senha' value={senha}  onChange={(senha) => setSenha(senha.target.value)} />
                 <br/>
                 <button onClick={novoUsuario}>Cadastrar</button>
                 <button onClick={logarUsuario}>Entrar</button>
