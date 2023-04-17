@@ -76,10 +76,10 @@ const Login = () => {
     }
  
     return (
-        <div>
+        <div className='container-login'>
             {
                 user && (
-                    <div>
+                    <div className='user-detail'>
                         <strong>
                             Seja bem-vindo(a) (Você está logado!)
                         </strong>
@@ -96,7 +96,7 @@ const Login = () => {
                 <input placeholder='Digite seu Email' value={email}  onChange={(email) => setEmail(email.target.value)} />
                 <br/>
                 <label>Senha:</label>
-                <input placeholder='Digite sua Senha' value={senha}  onChange={(senha) => setSenha(senha.target.value)} />
+                <input type='password' placeholder='Digite sua Senha' value={senha}  onChange={(senha) => setSenha(senha.target.value)} />
                 <br/>
                 <button onClick={novoUsuario}>Cadastrar</button>
                 <button onClick={logarUsuario}>Entrar</button>

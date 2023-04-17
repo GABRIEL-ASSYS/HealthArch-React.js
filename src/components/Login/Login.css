@@ -1,13 +1,19 @@
-.background {
+.container-login {
     background-color: #03989e;
-}
-
-.login {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin: 1rem;
+}
+
+.login, .user-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
     flex-wrap: wrap;
+    margin: 1rem;
 }
 
 h2 {
@@ -17,7 +23,8 @@ h2 {
 }
 
 label {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    color: #fff;
 }
 
 input {
@@ -28,6 +35,10 @@ input {
     border-radius: 0.625rem;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
+}
+
+input::placeholder {
+    font-size: 1.5rem;
 }
 
 input:hover {

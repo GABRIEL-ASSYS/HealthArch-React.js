@@ -8,8 +8,8 @@ function RoutesApp() {
     return(
         <BrowserRouter>
             <Routes>
-                <Route path="/LoginPage" element={<LoginPage />} />
-                <Route path="/ConsultasPage" element={<ConsultasPage />} />
+                <Route component={ LoginPage } path="/LoginPage" />
+                <Route component={ ConsultasPage } path="/ConsultasPage" />
             </Routes>
             <LoginPage />
         </BrowserRouter>
