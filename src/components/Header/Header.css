@@ -4,7 +4,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
 }
 
 .menu {
@@ -16,7 +15,7 @@ header {
 .menu-link {
     margin: 1rem;
     padding:0.625rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
     color: #03989e;

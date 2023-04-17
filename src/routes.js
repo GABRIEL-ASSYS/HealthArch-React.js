@@ -8,10 +8,9 @@ function RoutesApp() {
     return(
         <BrowserRouter>
             <Routes>
-                <Route component={ LoginPage } path="/LoginPage" />
-                <Route component={ ConsultasPage } path="/ConsultasPage" />
+                <Route Component={ LoginPage } path="/LoginPage" />
+                <Route Component={ ConsultasPage } path="/ConsultasPage" />
             </Routes>
-            <LoginPage />
         </BrowserRouter>
     )
 }
