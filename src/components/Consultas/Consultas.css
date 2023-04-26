@@ -3,18 +3,21 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
+    background-color: #022C2F;
+    border: 0.125rem solid #079480;
+    border-radius: 0.625rem;
 }
 
 .lista-busca-consulta__span {
     font-size: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: #022C2F;      
+    color: #03989e;      
 }
 
 h2 {
     font-size: 3rem;
-    color: #022C2F;
+    color: #03989e;
     text-transform: uppercase;
 }
 
@@ -23,10 +26,10 @@ h2 {
 }
 
 button {
-    background-color: #079480;
+    background-color: #03989e;
     font-size: 2rem;
     box-sizing: border-box;
-    border: 0.125rem solid #022C2F;
+    border: 0.125rem solid #079480;
     text-transform: uppercase;
     color: #022C2F;
     border-radius: 0.625rem;
@@ -37,7 +40,7 @@ button {
 
 button:hover {
     cursor: pointer;
-    box-shadow: 0.125rem 0.125rem 0.125rem #022C2F;
+    box-shadow: 0.125rem 0.125rem 0.125rem #03989e;
     transform: scale(1.025);
     transition-duration: 1s;
 }
@@ -55,28 +58,28 @@ label, span {
 }
 
 span {
-    color: #022C2F;
+    color: #03989e;
 }
 
 input {
     position: relative;
     font-size: 2rem;
     box-sizing: border-box;
-    border: 0.125rem solid #022C2F;
+    border: 0.125rem solid #03989e;
     border-radius: 0.625rem;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
 }
 
 input:hover {
-    box-shadow: 0.125rem 0.125rem 0.125rem #022C2F;
+    box-shadow: 0.125rem 0.125rem 0.125rem #03989e;
     transform: scale(1.025);
     transition-duration: 1s;
 }
 
 input::placeholder {
     font-size: 1rem;
-    color: #079480;
+    color: #022C2F;
 }
 
 @media screen and (max-width: 768px){

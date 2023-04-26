@@ -3,7 +3,6 @@ import './Consultas.css'
 import { useState, useEffect } from 'react'
 import { db } from '../../firebaseConnection'
 import { doc, collection, addDoc, getDocs, updateDoc, deleteDoc, onSnapshot } from 'firebase/firestore'
-import { async } from '@firebase/util'
 
 const Consultas = () => {
 

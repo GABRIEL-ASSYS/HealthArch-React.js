@@ -2,13 +2,7 @@ import '../../reset.css'
 import './Login.css'
 import { useState, useEffect } from 'react'
 import { auth } from '../../firebaseConnection'
-import {
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    signOut,
-    onAuthStateChanged
-} from 'firebase/auth'
-import { async } from '@firebase/util'
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
 
 const Login = () => {
     
