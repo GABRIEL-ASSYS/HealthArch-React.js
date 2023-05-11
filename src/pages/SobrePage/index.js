@@ -1,16 +1,14 @@
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import Sobre from "../../components/Sobre"
-import './SobrePage.css'
+import Header from "components/Header"
+import Footer from "components/Footer"
+import Sobre from "components/Sobre"
+import styles from './SobrePage.module.css'
 
-function SobrePage () {
+export default function SobrePage () {
     return (
-        <div>
+        <div className={styles.containerSobrePage}>
             <Header />
             <Sobre />
             <Footer />
         </div>
     )
 }
-
-export default SobrePage

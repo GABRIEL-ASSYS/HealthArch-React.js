@@ -1,16 +1,14 @@
-import Login from '../../components/Login'
-import Footer from '../../components/Footer'
-import Header from '../../components/Header'
-import './LoginPage.css'
+import Login from 'components/Login'
+import Footer from 'components/Footer'
+import Header from 'components/Header'
+import styles from './LoginPage.module.css'
 
-function LoginPage() {
+export default function LoginPage() {
     return (
-        <div>
+        <div className={styles.containerLoginPage}>
             <Header />
             <Login />
             <Footer />
         </div>
     )
 }
-
-export default LoginPage

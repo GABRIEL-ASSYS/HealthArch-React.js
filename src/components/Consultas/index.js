@@ -1,10 +1,10 @@
-import '../../reset.css'
-import './Consultas.css'
+import 'reset.css'
+import styles from './Consultas.module.css'
 import { useState, useEffect } from 'react'
-import { db } from '../../firebaseConnection'
+import { db } from 'firebaseConnection'
 import { doc, collection, addDoc, getDocs, updateDoc, deleteDoc, onSnapshot } from 'firebase/firestore'
 
-const Consultas = () => {
+export default function Consultas() {
 
     const [titulo, setTitulo] = useState('')
     const [descricao, setDescricao] = useState('')
@@ -103,42 +103,53 @@ const Consultas = () => {
     }
 
     return (
-        <div className='background'>
-            <div className='consultas'>
-                <h2>Consultas:</h2>
+        <div className={styles.background}>
+            <div className={styles.consultas}>
+                <h2 className={styles.listaBuscaConsulta__titulo}>Consultas:</h2>
+                <label className={styles.labelFormulario}>Título:</label>
+                <input
+                    className={styles.inputFormulario}
+                    placeholder='Digite o título da Consulta'
+                    value={titulo}
+                    onChange={(titulo) => setTitulo(titulo.target.value)}
+                />
+                <br />
+                <label className={styles.labelFormulario}>Descrição:</label>
+                <input
+                    className={styles.inputFormulario}
+                    placeholder='Digite a descrição da Consulta'
+                    value={descricao}
+                    onChange={(descricao) => setDescricao(descricao.target.value)}
+                />
+                <br />
+                <label className={styles.labelFormulario}>Hora:</label>
+                <input
+                    className={styles.inputFormulario}
+                    type='time'
+                    value={hora}
+                    onChange={(hora) => setHora(hora.target.value)}
+                />
+                <br />
 
-                <label>ID da Consulta:</label>
-                <input placeholder='Digite o ID da Consulta' value={idConsulta} onChange={(id) => setIdConsulta(id.target.value)} />
-                <br />
-                <label>Título:</label>
-                <input placeholder='Digite o título da Consulta' value={titulo} onChange={(titulo) => setTitulo(titulo.target.value)} />
-                <br />
-                <label>Descrição:</label>
-                <input placeholder='Digite a descrição da Consulta' value={descricao} onChange={(descricao) => setDescricao(descricao.target.value)} />
-                <br />
-                <label>Hora:</label>
-                <input type='time' value={hora} onChange={(hora) => setHora(hora.target.value)} />
-                <br />
-
-                <button onClick={adicionarConsulta}>Cadastrar</button>
-                <button onClick={buscaConsulta}>Buscar Consulta</button>
-                <button onClick={editarConsulta}>Editar Consulta</button>
+                <button className={styles.botaoConsulta} onClick={adicionarConsulta}>Cadastrar</button>
+                <button className={styles.botaoConsulta} onClick={buscaConsulta}>Buscar Consulta</button>
+                <button className={styles.botaoConsulta} onClick={editarConsulta}>Editar Consulta</button>
             </div>
-            <div className='consultas'>
+            <div className={styles.consultas}>
                 <ul>
                     {consultas.map((consulta) => {
                         return (
-                            <li key={consulta.id} className='lista-busca-consulta__item'>
-                                <span className='lista-busca-consulta__span'>ID: {consulta.id}</span>
+                            <li key={consulta.id} className={styles.listaBuscaConsulta__item}>
+                                <span className={styles.listaBuscaConsulta__span}>ID: {consulta.id}</span>
                                 <br />
-                                <span className='lista-busca-consulta__span'>Título: {consulta.titulo}</span>
+                                <span className={styles.listaBuscaConsulta__span}>Título: {consulta.titulo}</span>
                                 <br />
-                                <span className='lista-busca-consulta__span'>Descrção: {consulta.descricao}</span>
+                                <span className={styles.listaBuscaConsulta__span}>Descrção: {consulta.descricao}</span>
                                 <br />
-                                <span className='lista-busca-consulta__span'>Hora: {consulta.hora}</span>
+                                <span className={styles.listaBuscaConsulta__span}>Hora: {consulta.hora}</span>
                                 <br />
 
-                                <button onClick={() => excluirConsulta(consulta.id)}>Excluir</button>
+                                <button className={styles.botaoConsulta} onClick={() => excluirConsulta(consulta.id)}>Excluir</button>
                             </li>
                         )
                     })}
@@ -147,5 +158,3 @@ const Consultas = () => {
         </div>
     )
 }
-
-export default Consultas

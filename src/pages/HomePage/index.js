@@ -1,11 +1,12 @@
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import Home from '../../components/Home'
-import Contato from '../../components/Contato'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+import Home from 'components/Home'
+import Contato from 'components/Contato'
+import styles from './HomePage.module.css'
 
-function HomePage () {
+export default function HomePage () {
     return (
-        <div>
+        <div className={styles.containerHomePage}>
             <Header />
             <Home />
             <Contato />
@@ -13,5 +14,3 @@ function HomePage () {
         </div>
     )
 }
-
-export default HomePage

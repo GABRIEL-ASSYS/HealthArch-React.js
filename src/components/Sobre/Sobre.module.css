@@ -1,0 +1,59 @@
+.listaSobre {
+    background-color: #03989e;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    color: #022C2F;
+}
+
+.itemListaSobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.textoItemListaSobre {
+    padding: 0 5rem 0 5rem;
+    text-align: justify;
+    font-size: 1.25rem;
+}
+
+.tituloItemListaSobre {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.imagemItemListaSobre {
+    margin-top: 3rem;
+    width: 48.75rem;
+    height: 30rem;
+    border-radius: 1rem;
+    min-width: none;
+    min-height: none;
+    border: 0.125rem solid #022C2F;
+}
+
+@media screen and (max-width: 768px) {
+    .listaSobre {
+        padding: 0;
+    }
+
+    .textoItemListaSobre {
+        padding: 0;
+        font-size: 0.5rem;
+        width: auto;
+    }
+
+    .imagemItemListaSobre {
+        display: none;
+    }
+
+    .tituloItemListaSobre {
+        padding: 0.25rem;
+        font-size: 0.75rem;
+    }
+}

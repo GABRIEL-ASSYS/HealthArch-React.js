@@ -1,0 +1,89 @@
+.listaBuscaConsulta__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32rem;
+    background-color: #079480;
+    border: 0.125rem solid #022C2F;
+    border-radius: 0.625rem;
+}
+
+.listaBuscaConsulta__span {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #022C2F;      
+}
+
+.listaBuscaConsulta__titulo {
+    font-size: 3rem;
+    color: #022C2F;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.background {
+    background-color: #03989e;
+}
+
+.botaoConsulta {
+    background-color: #079480;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    border: 0.125rem solid #022C2F;
+    text-transform: uppercase;
+    color: #022C2F;
+    border-radius: 0.625rem;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.botaoConsulta:hover {
+    cursor: pointer;
+    box-shadow: 0.125rem 0.125rem 0.125rem #022C2F;
+    transform: scale(1.025);
+    transition-duration: 0.1s;
+}
+
+.consultas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.labelFormulario, .spanFormulario {
+    font-size: 2rem;
+    color: #022C2F;
+}
+
+.inputFormulario {
+    position: relative;
+    font-size: 2rem;
+    box-sizing: border-box;
+    border: 0.125rem solid #03989e;
+    border-radius: 0.625rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.inputFormulario:hover {
+    box-shadow: 0.125rem 0.125rem 0.125rem #03989e;
+    transform: scale(1.025);
+    transition-duration: 0.1s;
+}
+
+.inputFormulario::placeholder {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    .lista-busca-consulta__titulo {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}

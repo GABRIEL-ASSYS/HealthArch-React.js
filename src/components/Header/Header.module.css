@@ -1,0 +1,61 @@
+.cabecalhoContainer {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.menuLink {
+    margin: 1rem;
+    padding:0.625rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #03989e;
+    font-weight: bold;
+}
+
+.cabecalhoLogo {
+    width: 12.5rem;
+    height: 12.5rem;
+    padding: 0.15rem;
+}
+
+.menuLink:hover {
+    box-shadow: 4px 4px 4px #03989e;
+    background-color: #03989e;
+    color: #fff;
+    border-radius: 2rem;
+    border: 2px solid #022C2F;
+}
+
+.cabecalhoLogo:hover {
+    transform: scale(1.025);
+    transition-duration: 0.25s;
+}
+
+@media screen and (max-width: 768px) {
+    .menuLink {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .cabecalhoContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cabecalhoLogo {
+        margin: 0;
+        padding: 0;
+    }
+}

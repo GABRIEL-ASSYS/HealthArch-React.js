@@ -1,16 +1,14 @@
-import Header from "../../components/Header";
-import Consultas from "../../components/Consultas";
-import Footer from "../../components/Footer";
-import './ConsultasPage.css'
+import Header from "components/Header";
+import Consultas from "components/Consultas";
+import Footer from "components/Footer";
+import styles from './ConsultasPage.module.css'
 
-function ConsultasPage() {
+export default function ConsultasPage() {
     return (
-        <div className='app'>
+        <div className={styles.containerConsultasPage}>
             <Header />
             <Consultas />
             <Footer />
         </div>
     )
 }
-
-export default ConsultasPage

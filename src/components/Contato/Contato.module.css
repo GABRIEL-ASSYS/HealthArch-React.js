@@ -1,0 +1,52 @@
+.containerContato {
+    background-color: #03989e;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    color: #022C2F;
+    flex-wrap: wrap;
+}
+
+.tituloContato {
+    font-size: 3rem;
+    padding: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.itemContato {
+    font-size: 1.75rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.contatoMapa {
+    box-sizing: border-box;
+    border: 0.125rem solid #022C2F;
+    border-radius: 0.625rem;
+    margin-top: 1rem;
+    width: 48.75rem;
+    height: 28.75rem;
+    margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .containerContato {
+        padding: 0;
+    }
+
+    .tituloContato {
+        font-size: 2.5rem;
+    }
+
+    .itemContato {
+        font-size: 1.7rem;
+    }
+
+    .contatoMapa {
+        width: auto;
+        height: auto;
+        margin-top: 0.25rem;
+    }
+}

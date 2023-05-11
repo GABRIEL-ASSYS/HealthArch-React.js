@@ -1,13 +1,11 @@
-import '../../reset.css'
-import './Footer.css'
+import 'reset.css'
+import styles from './Footer.module.css'
 
-const Footer = () => {
+export default function Footer() {
 
     return (
-        <footer>
+        <footer className={styles.rodapeContainer}>
             <h3>Copyright 2023 by HealthArch</h3>
         </footer>
     )
 }
-
-export default Footer

@@ -1,10 +1,15 @@
-import '../../reset.css'
-import './Login.css'
+import 'reset.css'
+import styles from './Login.module.css'
 import { useState, useEffect } from 'react'
-import { auth } from '../../firebaseConnection'
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
+import { auth } from 'firebaseConnection'
+import { 
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged 
+} from 'firebase/auth'
 
-const Login = () => {
+export default function Login() {
     
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
@@ -70,35 +75,44 @@ const Login = () => {
     }
  
     return (
-        <div className='container-login'>
+        <div className={styles.containerLogin}>
             {
                 user && (
-                    <div className='user-detail'>
-                        <strong>
+                    <div className={styles.userDetail}>
+                        <strong className={styles.textoNegrito}>
                             Seja bem-vindo(a) (Você está logado!)
                         </strong>
                         <br/>
-                        <span>ID: {userDetail.uid}</span>
-                        <button onClick={fazerLogout}>Sair da Conta</button>
+                        <span className={styles.spanLogin}>ID: {userDetail.uid}</span>
+                        <button className={styles.botaoLogin} onClick={fazerLogout}>Sair da Conta</button>
                     </div>
                 )
             }
 
-            <div className='login'>
-                <h2>Usuários</h2>
-                <label>Email:</label>
-                <input placeholder='Digite seu Email' value={email}  onChange={(email) => setEmail(email.target.value)} />
+            <div className={styles.login}>
+                <h2 className={styles.tituloLogin}>Usuários</h2>
+                <label className={styles.labelLogin}>Email:</label>
+                <input
+                    className={styles.inputLogin}
+                    placeholder='Digite seu Email'
+                    value={email}
+                    onChange={(email) => setEmail(email.target.value)}
+                />
                 <br/>
-                <label>Senha:</label>
-                <input type='password' placeholder='Digite sua Senha' value={senha}  onChange={(senha) => setSenha(senha.target.value)} />
+                <label className={styles.labelLogin}>Senha:</label>
+                <input
+                    className={styles.inputLogin}
+                    type='password'
+                    placeholder='Digite sua Senha'
+                    value={senha} 
+                    onChange={(senha) => setSenha(senha.target.value)}
+                />
                 <br/>
-                <button onClick={novoUsuario}>Cadastrar</button>
-                <button onClick={logarUsuario}>Entrar</button>
+                <button className={styles.botaoLogin} onClick={novoUsuario}>Cadastrar</button>
+                <button className={styles.botaoLogin} onClick={logarUsuario}>Entrar</button>
             </div>
             <br/>
             <hr/>
         </div>
     )
 }
-
-export default Login
