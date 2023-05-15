@@ -4,11 +4,13 @@ import ConsultasPage from "pages/ConsultasPage"
 import HomePage from 'pages/HomePage'
 import SobrePage from 'pages/SobrePage'
 import NaoEncontrada from "pages/NaoEncontrada"
+import ScrollToTop from "ScrollToTop"
 
-function RoutesApp() {
+export default function RoutesApp() {
 
     return(
         <BrowserRouter>
+            <ScrollToTop />
             <Routes>
                 <Route Component={ HomePage } path="/"/>
                 <Route Component={ ConsultasPage } path="/ConsultasPage" />
@@ -20,5 +22,3 @@ function RoutesApp() {
         </BrowserRouter>
     )
 }
-
-export default RoutesApp
