@@ -7,10 +7,8 @@ import styles from './HomePage.module.css'
 export default function HomePage () {
     return (
         <div className={styles.containerHomePage}>
-            <Header />
             <Home />
             <Contato />
-            <Footer />
         </div>
     )
 }

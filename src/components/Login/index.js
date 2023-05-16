@@ -8,6 +8,7 @@ import {
     signOut,
     onAuthStateChanged 
 } from 'firebase/auth'
+import BotaoPadrao from 'components/BotaoPadrao'
 
 export default function Login() {
     
@@ -84,7 +85,7 @@ export default function Login() {
                         </strong>
                         <br/>
                         <span className={styles.spanLogin}>ID: {userDetail.uid}</span>
-                        <button className={styles.botaoLogin} onClick={fazerLogout}>Sair da Conta</button>
+                        <BotaoPadrao texto='Sair da Conta' onClick={fazerLogout}/>
                     </div>
                 )
             }
@@ -108,8 +109,8 @@ export default function Login() {
                     onChange={(senha) => setSenha(senha.target.value)}
                 />
                 <br/>
-                <button className={styles.botaoLogin} onClick={novoUsuario}>Cadastrar</button>
-                <button className={styles.botaoLogin} onClick={logarUsuario}>Entrar</button>
+                <BotaoPadrao texto='Cadastrar' onClick={novoUsuario}/>
+                <BotaoPadrao texto='Entrar' onClick={logarUsuario}/>
             </div>
             <br/>
             <hr/>

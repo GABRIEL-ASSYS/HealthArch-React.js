@@ -6,9 +6,7 @@ import styles from './SobrePage.module.css'
 export default function SobrePage () {
     return (
         <div className={styles.containerSobrePage}>
-            <Header />
             <Sobre />
-            <Footer />
         </div>
     )
 }

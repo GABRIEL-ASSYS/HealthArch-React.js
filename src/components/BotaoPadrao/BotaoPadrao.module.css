@@ -1,0 +1,19 @@
+.botaoPadrao {
+    background-color: #079480;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    border: 0.125rem solid #022C2F;
+    text-transform: uppercase;
+    color: #022C2F;
+    border-radius: 0.625rem;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.botaoPadrao:hover {
+    cursor: pointer;
+    box-shadow: 0.125rem 0.125rem 0.125rem #022C2F;
+    transform: scale(1.025);
+    transition-duration: 0.1s;
+}

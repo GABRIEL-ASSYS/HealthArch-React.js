@@ -6,9 +6,7 @@ import styles from './ConsultasPage.module.css'
 export default function ConsultasPage() {
     return (
         <div className={styles.containerConsultasPage}>
-            <Header />
             <Consultas />
-            <Footer />
         </div>
     )
 }
