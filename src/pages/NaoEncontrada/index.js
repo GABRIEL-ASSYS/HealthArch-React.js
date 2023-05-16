@@ -1,5 +1,3 @@
-import Footer from 'components/Footer'
-import Header from 'components/Header'
 import styles from './NaoEncontrada.module.css'
 import 'reset.css'
 
