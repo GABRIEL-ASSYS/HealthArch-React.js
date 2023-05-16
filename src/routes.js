@@ -13,13 +13,13 @@ export default function RoutesApp() {
         <BrowserRouter>
             <ScrollToTop />
             <Routes>
-                <Route Component={PaginaPadrao} path="/">
-                    <Route Component={HomePage} index />
-                    <Route Component={ConsultasPage} path="/ConsultasPage" />
-                    <Route Component={LoginPage} path="/LoginPage" />
-                    <Route Component={HomePage} path="/HomePage" />
-                    <Route Component={SobrePage} path="/SobrePage" />
-                    <Route Component={NaoEncontrada} path="*" />
+                <Route path="/" element={<PaginaPadrao/>}>
+                    <Route index element={<HomePage/>}/>
+                    <Route path="ConsultasPage" element={<ConsultasPage/>}/>
+                    <Route path="LoginPage" element={<LoginPage/>}/>
+                    <Route path="HomePage" element={<HomePage/>}/>
+                    <Route path="SobrePage" element={<SobrePage/>}/>
+                    <Route path="*" element={<NaoEncontrada/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
