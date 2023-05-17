@@ -1,10 +1,17 @@
 import 'reset.css'
 import styles from './Consultas.module.css'
 import BotaoPadrao from 'components/BotaoPadrao'
+import { useConsultas } from 'contexts/Consultas'
 
 export default function Consultas() {
 
-    
+    const {
+        consultas,
+        adicionarConsulta,
+        buscaConsulta,
+        editarConsulta,
+        excluirConsulta,
+    } = useConsultas()
 
     return (
         <div className={styles.background}>

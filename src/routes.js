@@ -6,6 +6,7 @@ import SobrePage from 'pages/SobrePage'
 import NaoEncontrada from "pages/NaoEncontrada"
 import ScrollToTop from "ScrollToTop"
 import PaginaPadrao from "pages/PaginaPadrao"
+import { ConsultasProvider } from "contexts/Consultas"
 
 export default function RoutesApp() {
 
@@ -13,13 +14,15 @@ export default function RoutesApp() {
         <BrowserRouter>
             <ScrollToTop />
             <Routes>
-                <Route path="/" element={<PaginaPadrao/>}>
-                    <Route index element={<HomePage/>}/>
-                    <Route path="ConsultasPage" element={<ConsultasPage/>}/>
-                    <Route path="LoginPage" element={<LoginPage/>}/>
-                    <Route path="HomePage" element={<HomePage/>}/>
-                    <Route path="SobrePage" element={<SobrePage/>}/>
-                    <Route path="*" element={<NaoEncontrada/>}/>
+                <Route path="/" element={<PaginaPadrao />}>
+                    <Route index element={<HomePage />} />
+                    <ConsultasProvider>
+                        <Route path="ConsultasPage" element={<ConsultasPage />} />
+                    </ConsultasProvider>
+                    <Route path="LoginPage" element={<LoginPage />} />
+                    <Route path="HomePage" element={<HomePage />} />
+                    <Route path="SobrePage" element={<SobrePage />} />
+                    <Route path="*" element={<NaoEncontrada />} />
                 </Route>
             </Routes>
         </BrowserRouter>
