@@ -13,6 +13,10 @@ export default function Consultas() {
         excluirConsulta,
     } = useConsultas()
 
+    const [titulo, setTitulo] = useState('')
+    const [descricao, setDescricao] = useState('')
+    const [hora, setHora] = useState('')
+
     return (
         <div className={styles.background}>
             <div className={styles.consultas}>
