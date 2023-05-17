@@ -12,7 +12,7 @@
     font-size: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: #022C2F;      
+    color: #022C2F;
 }
 
 .listaBuscaConsulta__titulo {
@@ -20,6 +20,26 @@
     color: #022C2F;
     text-transform: uppercase;
     padding-bottom: 2rem;
+}
+
+.linkEditarConsulta {
+    background-color: #079480;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    border: 0.125rem solid #022C2F;
+    text-transform: uppercase;
+    color: #022C2F;
+    border-radius: 0.625rem;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.linkEditarConsulta:hover {
+    cursor: pointer;
+    box-shadow: 0.125rem 0.125rem 0.125rem #022C2F;
+    transform: scale(1.025);
+    transition-duration: 0.1s;
 }
 
 .background {
@@ -35,7 +55,8 @@
     padding: 2rem 0;
 }
 
-.labelFormulario, .spanFormulario {
+.labelFormulario,
+.spanFormulario {
     font-size: 2rem;
     color: #022C2F;
 }
@@ -61,7 +82,7 @@
     text-align: center;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .lista-busca-consulta__titulo {
         font-size: 2.5rem;
         text-align: center;

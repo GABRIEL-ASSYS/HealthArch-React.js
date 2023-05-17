@@ -2,6 +2,7 @@ import 'reset.css'
 import styles from './Consultas.module.css'
 import BotaoPadrao from 'components/BotaoPadrao'
 import { useConsultas } from 'contexts/Consultas'
+import { Link } from 'react-router-dom'
 
 export default function Consultas() {
 
@@ -9,7 +10,6 @@ export default function Consultas() {
         consultas,
         adicionarConsulta,
         buscaConsulta,
-        editarConsulta,
         excluirConsulta,
     } = useConsultas()
 
@@ -42,9 +42,8 @@ export default function Consultas() {
                 />
                 <br />
 
-                <BotaoPadrao texto='Cadastrar' onClick={adicionarConsulta}/>
-                <BotaoPadrao texto='Buscar Consulta' onClick={buscaConsulta}/>
-                <BotaoPadrao texto='Editar Consulta' onClick={editarConsulta}/>
+                <BotaoPadrao texto='Cadastrar' onClick={adicionarConsulta} />
+                <BotaoPadrao texto='Buscar Consulta' onClick={buscaConsulta} />
             </div>
             <div className={styles.consultas}>
                 <ul>
@@ -60,7 +59,8 @@ export default function Consultas() {
                                 <span className={styles.listaBuscaConsulta__span}>Hora: {consulta.hora}</span>
                                 <br />
 
-                                <BotaoPadrao texto='Excluir' onClick={() => excluirConsulta(consulta.id)}/>
+                                <BotaoPadrao texto='Excluir' onClick={() => excluirConsulta(consulta.id)} />
+                                <Link className={styles.linkEditarConsulta} to={`/EditarConsulta/${consulta.id}`}>Editar</Link>
                             </li>
                         )
                     })}

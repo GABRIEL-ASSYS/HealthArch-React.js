@@ -1,0 +1,45 @@
+.consultaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.backgroundConsulta {
+    background-color: #03989e;
+}
+
+.consultaTitulo {
+    font-size: 3rem;
+    color: #022C2F;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.labelConsulta {
+    font-size: 2rem;
+    color: #022C2F;
+}
+
+.inputConsulta {
+    position: relative;
+    font-size: 2rem;
+    box-sizing: border-box;
+    border: 0.125rem solid #03989e;
+    border-radius: 0.625rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.inputConsulta:hover {
+    box-shadow: 0.125rem 0.125rem 0.125rem #03989e;
+    transform: scale(1.025);
+    transition-duration: 0.1s;
+}
+
+.inputConsulta::placeholder {
+    font-size: 1.5rem;
+    text-align: center;
+}

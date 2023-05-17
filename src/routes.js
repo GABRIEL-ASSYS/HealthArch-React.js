@@ -6,6 +6,7 @@ import SobrePage from 'pages/SobrePage'
 import NaoEncontrada from "pages/NaoEncontrada"
 import ScrollToTop from "ScrollToTop"
 import PaginaPadrao from "pages/PaginaPadrao"
+import EditarConsultasPage from "pages/EditarConsultasPage"
 import { ConsultasProvider } from "contexts/Consultas"
 
 export default function RoutesApp() {
@@ -18,6 +19,7 @@ export default function RoutesApp() {
                     <Route index element={<HomePage />} />
                     <ConsultasProvider>
                         <Route path="ConsultasPage" element={<ConsultasPage />} />
+                        <Route path="EditarConsultasPage/:idConsulta" element={<EditarConsultasPage />}/>
                     </ConsultasProvider>
                     <Route path="LoginPage" element={<LoginPage />} />
                     <Route path="HomePage" element={<HomePage />} />
