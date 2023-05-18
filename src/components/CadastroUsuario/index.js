@@ -1,5 +1,6 @@
 import BotaoPadrao from 'components/BotaoPadrao'
 import styles from './CadastroUsuario.module.css'
+import { useState } from 'react'
 
 export default function CadastroUsuario() {
   const [tipoCadastro, setTipoCadastro] = useState('Cliente')
