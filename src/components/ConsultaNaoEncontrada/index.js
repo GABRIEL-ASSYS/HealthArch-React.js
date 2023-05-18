@@ -1,3 +1,4 @@
+import 'reset.css'
 import styles from './ConsultaNaoEncontrada.module.css'
 
 export default function ConsultaNaoEncontrada() {

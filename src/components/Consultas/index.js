@@ -3,6 +3,7 @@ import styles from './Consultas.module.css'
 import BotaoPadrao from 'components/BotaoPadrao'
 import { useConsultas } from 'contexts/Consultas'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 export default function Consultas() {
 
@@ -15,7 +16,9 @@ export default function Consultas() {
 
     const [titulo, setTitulo] = useState('')
     const [descricao, setDescricao] = useState('')
-    const [hora, setHora] = useState('')
+    const [horaData, setHoraData] = useState('')
+    const [nomeCliente, setNomeCliente] = useState('')
+    const [nomeProfissional, setNomeProfissional] = useState('')
 
     return (
         <div className={styles.background}>
@@ -37,12 +40,28 @@ export default function Consultas() {
                     onChange={(descricao) => setDescricao(descricao.target.value)}
                 />
                 <br />
-                <label className={styles.labelFormulario}>Hora:</label>
+                <label className={styles.labelFormulario}>Data e Hora:</label>
                 <input
                     className={styles.inputFormulario}
-                    type='time'
-                    value={hora}
-                    onChange={(hora) => setHora(hora.target.value)}
+                    type='datetime-local'
+                    value={horaData}
+                    onChange={(horaData) => setHoraData(horaData.target.value)}
+                />
+                <br />
+                <label className={styles.labelFormulario}>Nome do Cliente:</label>
+                <input
+                    className={styles.inputFormulario}
+                    placeholder='Digite o nome do cliente'
+                    value={nomeCliente}
+                    onChange={(nomeCliente) => setNomeCliente(nomeCliente.target.value)}
+                />
+                <br />
+                <label className={styles.labelFormulario}>Nome do Profissional:</label>
+                <input
+                    className={styles.inputFormulario}
+                    placeholder='Digite o nome do profissional'
+                    value={nomeProfissional}
+                    onChange={(nomeProfissional) => setNomeProfissional(nomeProfissional.target.value)}
                 />
                 <br />
 
@@ -60,7 +79,11 @@ export default function Consultas() {
                                 <br />
                                 <span className={styles.listaBuscaConsulta__span}>Descrção: {consulta.descricao}</span>
                                 <br />
-                                <span className={styles.listaBuscaConsulta__span}>Hora: {consulta.hora}</span>
+                                <span className={styles.listaBuscaConsulta__span}>Data e Hora: {consulta.horaData}</span>
+                                <br />
+                                <span className={styles.listaBuscaConsulta__span}>Nome do Cliente: {consulta.nomeCliente}</span>
+                                <br />
+                                <span className={styles.listaBuscaConsulta__span}>Nome do Profissional: {consulta.nomeProfissional}</span>
                                 <br />
 
                                 <BotaoPadrao texto='Excluir' onClick={() => excluirConsulta(consulta.id)} />

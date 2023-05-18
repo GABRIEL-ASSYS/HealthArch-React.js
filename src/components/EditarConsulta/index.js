@@ -1,3 +1,4 @@
+import 'reset.css'
 import { useParams } from 'react-router-dom'
 import styles from './EditarConsulta.module.css'
 import { useConsultas } from 'contexts/Consultas'
@@ -17,7 +18,9 @@ export default function EditarConsulta() {
     editarConsultas(consulta.id, {
       titulo: consulta.titulo,
       descricao: consulta.descricao,
-      hora: consulta.hora
+      horaData: consulta.horaData,
+      nomeCliente: consulta.nomeCliente,
+      nomeProfissional: consulta.nomeProfissional
     })
   }
 
@@ -41,12 +44,28 @@ export default function EditarConsulta() {
           onChange={(descricao) => consulta.setDescricao(descricao.target.value)}
         />
         <br />
-        <label className={styles.labelConsulta}>Hora:</label>
+        <label className={styles.labelConsulta}>Data e Hora:</label>
         <input
           className={styles.inputConsulta}
           type='time'
-          value={consulta.hora}
-          onChange={(hora) => consulta.setHora(hora.target.value)}
+          value={consulta.horaData}
+          onChange={(horaData) => consulta.setHoraData(horaData.target.value)}
+        />
+        <br />
+        <label className={styles.labelConsulta}>Nome do Cliente:</label>
+        <input
+          className={styles.inputConsulta}
+          placeholder='Digite o nome do cliente'
+          value={consulta.nomeCliente}
+          onChange={(nomeCliente) => consulta.setNomeCliente(nomeCliente.target.value)}
+        />
+        <br />
+        <label className={styles.labelConsulta}>Nome do Profissional:</label>
+        <input
+          className={styles.inputConsulta}
+          placeholder='Digite o nome do profissional'
+          value={consulta.nomeProfissional}
+          onChange={(nomeProfissional) => consulta.setNomeCliente(nomeProfissional.target.value)}
         />
         <br />
 

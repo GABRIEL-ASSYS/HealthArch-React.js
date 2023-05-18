@@ -11,8 +11,10 @@ export function useConsultas() {
 export function ConsultasProvider({ children }) {
     const [titulo, setTitulo] = useState('')
     const [descricao, setDescricao] = useState('')
-    const [hora, setHora] = useState('')
+    const [horaData, setHoraData] = useState('')
     const [idConsulta, setIdConsulta] = useState('')
+    const [nomeCliente, setNomeCliente] = useState('')
+    const [nomeProfissional, setNomeProfissional] = useState('')
 
     const [consultas, setConsultas] = useState([])
 
@@ -26,7 +28,9 @@ export function ConsultasProvider({ children }) {
                         id: doc.id,
                         titulo: doc.data().titulo,
                         descricao: doc.data().descricao,
-                        hora: doc.data().hora
+                        horaData: doc.data().horaData,
+                        nomeCliente: doc.data().nomeCliente,
+                        nomeProfissional: doc.data().nomeProfissional
                     })
                 })
                 setConsultas(listaConsulta)
@@ -51,13 +55,17 @@ export function ConsultasProvider({ children }) {
             {
                 titulo: titulo,
                 descricao: descricao,
-                hora: hora
+                horaData: horaData,
+                nomeCliente: nomeCliente,
+                nomeProfissional: nomeProfissional
             })
             .then(() => {
                 console.log("Consulta cadastrada com sucesso!")
                 setTitulo('')
                 setDescricao('')
-                setHora('')
+                setHoraData('')
+                setNomeCliente('')
+                setNomeProfissional('')
             })
             .catch((error) => {
                 console.log("Erro ao cadastrar consulta:" + error)
@@ -74,7 +82,9 @@ export function ConsultasProvider({ children }) {
                         id: doc.id,
                         titulo: doc.data().titulo,
                         descricao: doc.data().descricao,
-                        hora: doc.data().hora
+                        horaData: doc.data().horaData,
+                        nomeCliente: doc.data().nomeCliente,
+                        nomeProfissional: doc.data().nomeProfissional
                     })
                 })
                 setConsultas(lista)
@@ -90,14 +100,18 @@ export function ConsultasProvider({ children }) {
         await updateDoc(docRef, {
             titulo: titulo,
             descricao: descricao,
-            hora: hora
+            horaData: horaData,
+            nomeCliente: nomeCliente,
+            nomeProfissional: nomeProfissional
         })
             .then(() => {
                 console.log("Consulta editada com sucesso!")
                 setIdConsulta('')
                 setTitulo('')
                 setDescricao('')
-                setHora('')
+                setHoraData('')
+                setNomeCliente('')
+                setNomeProfissional('')
             })
             .catch((error) => {
                 console.log("Erro ao editar consulta!" + error)
