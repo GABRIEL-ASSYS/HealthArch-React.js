@@ -1,4 +1,4 @@
-.containerLogin {
+.containerCadastros {
     background-color: #03989e;
     display: flex;
     flex-direction: column;
@@ -7,8 +7,7 @@
     padding: 1rem 0;
 }
 
-.login,
-.userDetail {
+.cadastro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,31 +16,19 @@
     margin: 1rem;
 }
 
-.textoNegrito {
-    font-size: 2rem;
-    color: #022C2F;
-    padding: 0.5rem;
-}
-
-.spanLogin {
-    font-size: 1.5rem;
-    color: #022C2F;
-    padding-bottom: 0.5rem;
-}
-
-.tituloLogin {
+.tituloCadastro {
     font-size: 2.5rem;
     padding: 2rem;
     text-transform: uppercase;
     color: #022C2F;
 }
 
-.labelLogin {
+.labelCadastro {
     font-size: 2rem;
     color: #022C2F;
 }
 
-.inputLogin {
+.inputCadastro {
     position: relative;
     font-size: 2rem;
     box-sizing: border-box;
@@ -51,18 +38,18 @@
     margin-top: 0.5rem;
 }
 
-.inputLogin::placeholder {
+.inputCadastro::placeholder {
     font-size: 1.5rem;
 }
 
-.inputLogin:hover {
+.inputCadastro:hover {
     box-shadow: 0.125rem 0.125rem 0.125rem #022C2F;
     transform: scale(1.025);
     transition-duration: 0.1s;
 }
 
 @media screen and (max-width: 768px) {
-    .tituloLogin {
+    .tituloCadastro {
         font-size: 2.5rem;
         text-align: center;
     }

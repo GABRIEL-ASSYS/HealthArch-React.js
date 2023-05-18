@@ -91,7 +91,7 @@ export default function Login() {
             }
 
             <div className={styles.login}>
-                <h2 className={styles.tituloLogin}>Usuários</h2>
+                <h2 className={styles.tituloLogin}>Login</h2>
                 <label className={styles.labelLogin}>Email:</label>
                 <input
                     className={styles.inputLogin}
