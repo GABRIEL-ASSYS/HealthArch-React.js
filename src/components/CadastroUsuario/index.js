@@ -1,9 +1,31 @@
 import BotaoPadrao from 'components/BotaoPadrao'
 import styles from './CadastroUsuario.module.css'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { UsuariosContext } from 'contexts/Usuarios'
 
 export default function CadastroUsuario() {
   const [tipoCadastro, setTipoCadastro] = useState('Cliente')
+
+  const {
+    nomeCliente,
+    setNomeCliente,
+    emailCliente,
+    setEmailCliente,
+    passwordCliente,
+    setPasswordCliente,
+    telefoneCliente,
+    setTelefoneCliente,
+    nomeProfissional,
+    setNomeProfissional,
+    emailProfissional,
+    setEmailProfissional,
+    passwordProfissional,
+    setPasswordProfissional,
+    telefoneProfissional,
+    setTelefoneProfissional,
+    codigoRegional,
+    setCodigoRegional
+  } = useContext(UsuariosContext)
 
   return (
     <div className={styles.containerCadastros}>
@@ -89,8 +111,8 @@ export default function CadastroUsuario() {
             className={styles.inputCadastro}
             placeholder='Digite sua senha'
             type='password'
-            value={senhaProfissional}
-            onChange={(senhaProfissional) => setSenhaProfissional(senhaProfissional.target.value)}
+            value={passwordProfissional}
+            onChange={(passwordProfissional) => setPasswordProfissional(passwordProfissional.target.value)}
           />
           <br />
           <label className={styles.labelCadastro}>Telefone:</label>
