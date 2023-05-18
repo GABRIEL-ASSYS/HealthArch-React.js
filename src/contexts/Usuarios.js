@@ -14,30 +14,40 @@ export default function UsuariosProvider({ children }) {
     const [telefoneProfissional, setTelefoneProfissional] = useState('')
     const [codigoRegional, setCodigoRegional] = useState('')
 
-  return (
-    <UsuariosContext.Provider
-        value={{
-            nomeCliente,
-            setNomeCliente,
-            emailCliente,
-            setEmailCliente,
-            passwordCliente,
-            setPasswordCliente,
-            telefoneCliente,
-            setTelefoneCliente,
-            nomeProfissional,
-            setNomeProfissional,
-            emailProfissional,
-            setEmailProfissional,
-            passwordProfissional,
-            setPasswordProfissional,
-            telefoneProfissional,
-            setTelefoneProfissional,
-            codigoRegional,
-            setCodigoRegional
-        }}
-    >
-        {children}
-    </UsuariosContext.Provider>
-  )
+    const novoUsuarioCliente = () => {
+
+    }
+
+    const novoUsuarioProfissional = () => {
+
+    }
+
+    const valorUsuarios = {
+        nomeCliente,
+        setNomeCliente,
+        emailCliente,
+        setEmailCliente,
+        passwordCliente,
+        setPasswordCliente,
+        telefoneCliente,
+        setTelefoneCliente,
+        nomeProfissional,
+        setNomeProfissional,
+        emailProfissional,
+        setEmailProfissional,
+        passwordProfissional,
+        setPasswordProfissional,
+        telefoneProfissional,
+        setTelefoneProfissional,
+        codigoRegional,
+        setCodigoRegional,
+        novoUsuarioCliente,
+        novoUsuarioProfissional
+    }
+
+    return (
+        <UsuariosContext.Provider value={valorUsuarios}>
+            {children}
+        </UsuariosContext.Provider>
+    )
 }
