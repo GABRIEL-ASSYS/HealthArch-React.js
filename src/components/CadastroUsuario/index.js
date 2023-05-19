@@ -7,24 +7,10 @@ export default function CadastroUsuario() {
   const [tipoCadastro, setTipoCadastro] = useState('Cliente')
 
   const {
-    nomeCliente,
-    setNomeCliente,
-    emailCliente,
-    setEmailCliente,
-    passwordCliente,
-    setPasswordCliente,
-    telefoneCliente,
-    setTelefoneCliente,
-    nomeProfissional,
-    setNomeProfissional,
-    emailProfissional,
-    setEmailProfissional,
-    passwordProfissional,
-    setPasswordProfissional,
-    telefoneProfissional,
-    setTelefoneProfissional,
-    codigoRegional,
-    setCodigoRegional
+    cadastroCliente,
+    cadastroProfissional,
+    novoUsuarioCliente,
+    novoUsuarioProfissional
   } = useContext(UsuariosContext)
 
   return (
